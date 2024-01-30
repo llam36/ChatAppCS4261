@@ -18,6 +18,7 @@ struct MessageField: View {
                 CustomTextField(placeholder: Text("Enter your message here"), text: $message)
                     .frame(height: 52)
                     .disableAutocorrection(true)
+                    .foregroundColor(.black)
 
                 Button {
                     messagesManager.sendMessage(text: message)
@@ -35,7 +36,18 @@ struct MessageField: View {
             .background(Color("Gray"))
             .cornerRadius(50)
         .padding()
+            Button {
+                
+            } label: {
+                Image(systemName: "map.fill")
+                    .foregroundColor(.white)
+                    .padding(10)
+                    .background(Color("Red"))
+                    .cornerRadius(50)
+            }
         }
+        .padding(.trailing, 10)
+        .background(.white)
     }
 }
 
@@ -57,7 +69,7 @@ struct CustomTextField: View {
             // If text is empty, show the placeholder on top of the TextField
             if text.isEmpty {
                 placeholder
-                .opacity(1)
+                    .opacity(0.5)
             }
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
         }
