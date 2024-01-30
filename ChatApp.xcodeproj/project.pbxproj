@@ -18,6 +18,7 @@
 		22F00B9B278CE6DA00F23D14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F00B9A278CE6DA00F23D14 /* ContentView.swift */; };
 		22F00B9D278CE6DB00F23D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F00B9C278CE6DB00F23D14 /* Assets.xcassets */; };
 		22F00BA0278CE6DB00F23D14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F00B9F278CE6DB00F23D14 /* Preview Assets.xcassets */; };
+		4E638C462B69A539007B79A3 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E638C452B69A538007B79A3 /* LogInView.swift */; };
 		4E8A686F2B68B0E500BE4180 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4E8A686E2B68B0E500BE4180 /* FirebaseAnalytics */; };
 		4E8A68712B68B0E500BE4180 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 4E8A68702B68B0E500BE4180 /* FirebaseAnalyticsOnDeviceConversion */; };
 		4E8A68732B68B0E500BE4180 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4E8A68722B68B0E500BE4180 /* FirebaseAnalyticsSwift */; };
@@ -60,6 +61,7 @@
 		22F00B9A278CE6DA00F23D14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		22F00B9C278CE6DB00F23D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F00B9F278CE6DB00F23D14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E638C452B69A538007B79A3 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				22F00B98278CE6DA00F23D14 /* ChatAppApp.swift */,
 				22F00B9A278CE6DA00F23D14 /* ContentView.swift */,
+				4E638C452B69A538007B79A3 /* LogInView.swift */,
 				221431E5278DF4FF005695C1 /* Extensions.swift */,
 				221431EC278E36C0005695C1 /* MessagesManager.swift */,
 				221431E7278E088E005695C1 /* GoogleService-Info.plist */,
@@ -275,6 +278,7 @@
 				221431ED278E36C0005695C1 /* MessagesManager.swift in Sources */,
 				221431E2278DE0F4005695C1 /* TitleRow.swift in Sources */,
 				221431E4278DEA66005695C1 /* MessageField.swift in Sources */,
+				4E638C462B69A539007B79A3 /* LogInView.swift in Sources */,
 				22F00B99278CE6DA00F23D14 /* ChatAppApp.swift in Sources */,
 				221431E6278DF4FF005695C1 /* Extensions.swift in Sources */,
 			);

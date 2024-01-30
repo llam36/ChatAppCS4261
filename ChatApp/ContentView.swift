@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var messagesManager = MessagesManager()
+    @EnvironmentObject var appState : AppState
     
     var body: some View {
         VStack {

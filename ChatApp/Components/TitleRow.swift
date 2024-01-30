@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TitleRow: View {
+    @EnvironmentObject var appState : AppState
+
     var imageUrl = URL(string: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8")
     var name = "Sarah Smith"
     
@@ -32,11 +34,15 @@ struct TitleRow: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            Image(systemName: "phone.fill")
-                .foregroundColor(.gray)
-                .padding(10)
-                .background(.white)
-                .cornerRadius(50)
+            Button {
+                appState.hasLogin = false
+            } label: {
+                Image(systemName: "rectangle.portrait.and.arrow.right.fill")
+                    .foregroundColor(.red)
+                    .padding(10)
+                    .background(.white)
+                    .cornerRadius(50)
+            }
         }
         .padding()
     }
