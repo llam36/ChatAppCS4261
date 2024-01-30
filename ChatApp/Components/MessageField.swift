@@ -13,27 +13,29 @@ struct MessageField: View {
 
     var body: some View {
         HStack {
-            // Custom text field created below
-            CustomTextField(placeholder: Text("Enter your message here"), text: $message)
-                .frame(height: 52)
-                .disableAutocorrection(true)
+            HStack {
+                // Custom text field created below
+                CustomTextField(placeholder: Text("Enter your message here"), text: $message)
+                    .frame(height: 52)
+                    .disableAutocorrection(true)
 
-            Button {
-                messagesManager.sendMessage(text: message)
-                message = ""
-            } label: {
-                Image(systemName: "paperplane.fill")
-                    .foregroundColor(.white)
-                    .padding(10)
-                    .background(Color("Peach"))
-                    .cornerRadius(50)
+                Button {
+                    messagesManager.sendMessage(text: message)
+                    message = ""
+                } label: {
+                    Image(systemName: "paperplane.fill")
+                        .foregroundColor(.white)
+                        .padding(10)
+                        .background(Color("Red"))
+                        .cornerRadius(50)
+                }
             }
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 10)
-        .background(Color("Gray"))
-        .cornerRadius(50)
+            .padding(.horizontal)
+            .padding(.vertical, 10)
+            .background(Color("Gray"))
+            .cornerRadius(50)
         .padding()
+        }
     }
 }
 
@@ -55,7 +57,7 @@ struct CustomTextField: View {
             // If text is empty, show the placeholder on top of the TextField
             if text.isEmpty {
                 placeholder
-                .opacity(0.5)
+                .opacity(1)
             }
             TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
         }

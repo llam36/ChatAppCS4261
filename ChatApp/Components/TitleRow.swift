@@ -28,7 +28,7 @@ struct TitleRow: View {
                 
                 Text("Online")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -45,6 +45,6 @@ struct TitleRow: View {
 struct TitleRow_Previews: PreviewProvider {
     static var previews: some View {
         TitleRow()
-            .background(Color("Peach"))
+            .background(Color("Red"))
     }
 }
