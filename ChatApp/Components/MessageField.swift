@@ -10,6 +10,7 @@ import SwiftUI
 struct MessageField: View {
     @EnvironmentObject var messagesManager: MessagesManager
     @State private var message = ""
+    @EnvironmentObject var appState : AppState
 
     var body: some View {
         HStack {
@@ -37,7 +38,7 @@ struct MessageField: View {
             .cornerRadius(50)
         .padding()
             Button {
-                
+                appState.useMap = true
             } label: {
                 Image(systemName: "map.fill")
                     .foregroundColor(.white)

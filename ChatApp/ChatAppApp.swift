@@ -10,9 +10,11 @@ import Firebase
 
 class AppState: ObservableObject {
     @Published var hasLogin : Bool
+    @Published var useMap : Bool
     
-    init(hasLogin : Bool) {
+    init(hasLogin : Bool, useMap : Bool) {
         self.hasLogin = hasLogin
+        self.useMap = useMap
     }
 }
 
@@ -22,15 +24,20 @@ struct ChatAppApp: App {
         FirebaseApp.configure()
     }
     
-    @ObservedObject var appState = AppState(hasLogin: false)
+    @ObservedObject var appState = AppState(hasLogin: false, useMap: false)
     var body: some Scene {
         WindowGroup {
             if appState.hasLogin {
-                ContentView()
-                    .environmentObject(appState)
+                if appState.useMap {
+                    MapView()
+                        .environmentObject(appState)
+                } else {
+                    ContentView()
+                        .environmentObject(appState)
+                }
             } else {
-                LogInView()
-                    .environmentObject(appState)
+                    LogInView()
+                        .environmentObject(appState)
             }
         }
     }
