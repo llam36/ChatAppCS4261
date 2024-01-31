@@ -18,6 +18,7 @@ struct MessageBubble: View {
                     .padding()
                     .background(message.received ? Color("Blue") : Color("Red"))
                     .cornerRadius(30)
+                    .foregroundColor(.white)
             }
             .frame(maxWidth: 300, alignment: message.received ? .leading : .trailing)
             .onTapGesture {
@@ -27,7 +28,8 @@ struct MessageBubble: View {
             if showTime {
                 Text("\(message.timestamp.formatted(.dateTime.hour().minute()))")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
+                    .opacity(0.5)
                     .padding(message.received ? .leading : .trailing, 25)
             }
         }

@@ -15,6 +15,8 @@ struct ContentView: View {
         VStack {
             VStack {
                 TitleRow()
+                    .padding(10)
+                    .frame(maxHeight: 60)
                 
                 ScrollViewReader { proxy in
                     ScrollView {
@@ -22,9 +24,9 @@ struct ContentView: View {
                             MessageBubble(message: message)
                         }
                     }
-                    .padding(.top, 10)
-                    .background(.white)
-                    .cornerRadius(30, corners: [.topLeft, .topRight]) // Custom cornerRadius modifier added in Extensions file
+                    .padding(.top, 30)
+                    .background(.black)
+                    .cornerRadius(0, corners: [.topLeft, .topRight]) // Custom cornerRadius modifier added in Extensions file
                     .onChange(of: messagesManager.lastMessageId) { id in
                         // When the lastMessageId changes, scroll to the bottom of the conversation
                         withAnimation {
@@ -37,6 +39,7 @@ struct ContentView: View {
             
             MessageField()
                 .environmentObject(messagesManager)
+                .frame(maxHeight: 40)
         }
     }
 }

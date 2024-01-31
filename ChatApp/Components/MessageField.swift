@@ -16,7 +16,7 @@ struct MessageField: View {
             HStack {
                 // Custom text field created below
                 CustomTextField(placeholder: Text("Enter your message here"), text: $message)
-                    .frame(height: 52)
+                    .frame(height: 42)
                     .disableAutocorrection(true)
                     .foregroundColor(.black)
 
