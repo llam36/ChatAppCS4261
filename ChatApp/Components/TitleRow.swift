@@ -40,7 +40,7 @@ struct TitleRow: View {
                 Image(systemName: "rectangle.portrait.and.arrow.right.fill")
                     .foregroundColor(.red)
                     .padding(10)
-                    .background(.white)
+                    .background(Color(red: 0.6, green: 0.4, blue: 0.8))
                     .cornerRadius(50)
             }
         }
